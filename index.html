@@ -249,6 +249,28 @@ SEO Meta Tags
   .process-step p{ color: var(--slate); font-size: 0.9rem; }
   @media(min-width: 700px){ .process-grid{ grid-template-columns: repeat(3,1fr);} }
 
+  /* ---------- Fleet photo banner ---------- */
+  .fleet-banner{
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+  }
+  .fleet-banner img{
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .fleet-banner-overlay{
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(6,20,49,0.88) 0%, rgba(6,20,49,0.55) 55%, rgba(6,20,49,0.25) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 24px;
+  }
+  .fleet-banner-overlay h2{ max-width: 20ch; margin-top: 8px; }
+  @media(min-width: 700px){ .fleet-banner{ height: 360px; } .fleet-banner-overlay{ padding: 0 60px; } }
+
   /* ---------- Who we serve ---------- */
   .serve{ background: var(--white); border-bottom: 1px solid var(--line); }
   .serve-grid{
@@ -270,11 +292,26 @@ SEO Meta Tags
   .about-grid{ display:grid; gap: 30px; margin-top: 24px; }
   .about-copy p{ color: var(--slate); margin-bottom: 14px; font-size: 0.98rem; }
   .about-card{
+    position: relative;
     background: var(--navy);
     color: var(--white);
     border-radius: var(--radius);
-    padding: 26px;
+    overflow: hidden;
     border-left: 3px solid var(--gold);
+    min-height: 260px;
+  }
+  .about-card img{
+    width: 100%; height: 100%;
+    position: absolute; inset:0;
+    object-fit: cover;
+    opacity: 0.55;
+  }
+  .about-card-text{
+    position: relative;
+    padding: 26px;
+    background: linear-gradient(180deg, rgba(10,32,80,0.15) 0%, rgba(6,20,49,0.94) 70%);
+    min-height: 260px;
+    display:flex; flex-direction:column; justify-content:flex-end;
   }
   .about-card .eyebrow{ color: var(--gold-light); }
   .about-card p{ color: rgba(255,255,255,0.82); font-size: 0.92rem; margin-top: 10px; }
@@ -283,8 +320,14 @@ SEO Meta Tags
   /* ---------- Services ---------- */
   .services{ background: var(--white); }
   .services-head{ display:flex; align-items:flex-end; justify-content:space-between; gap: 24px; flex-wrap: wrap; }
-  .crates-icon{ width: 100px; height: auto; flex-shrink:0; display:none; }
-  @media(min-width: 640px){ .crates-icon{ display:block; } }
+  .services-photo{
+    width: 220px; height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    flex-shrink:0;
+    display:none;
+  }
+  @media(min-width: 640px){ .services-photo{ display:block; } }
   .service-list{
     margin-top: 28px;
     border-top: 1px solid var(--line);
@@ -319,7 +362,9 @@ SEO Meta Tags
 
   /* ---------- Coverage ---------- */
   .coverage{
-    background: var(--navy-deep);
+    background:
+      linear-gradient(rgba(6,20,49,0.90), rgba(6,20,49,0.94)),
+      url('https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?fm=jpg&q=60&w=1400&auto=format&fit=crop') center/cover no-repeat;
     color: var(--white);
   }
   .coverage-grid{
@@ -566,6 +611,14 @@ SEO Meta Tags
   </div>
 </section>
 
+<section class="fleet-banner">
+  <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?fm=jpg&amp;q=60&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Delivery truck on the highway" loading="lazy">
+  <div class="fleet-banner-overlay">
+    <p class="eyebrow" style="color:var(--gold-light);">On the road</p>
+    <h2 style="color:var(--white);">A fleet built to keep Nigeria moving</h2>
+  </div>
+</section>
+
 <section class="serve">
   <div class="container">
     <div class="section-head">
@@ -597,9 +650,12 @@ SEO Meta Tags
         <p>Our mission is simple: every package reaches its destination securely and on time, backed by excellent customer service. Your trust is our priority, and every delivery matters.</p>
       </div>
       <div class="about-card">
-        <p class="eyebrow">Coverage</p>
-        <h3 style="color:var(--white); margin-top:6px;">Lagos-based. Nationwide reach.</h3>
-        <p>Operating out of Jibowu, Lagos, with delivery routes covering Nigeria and cross-border service to Accra, Ghana.</p>
+        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?fm=jpg&amp;q=60&amp;w=900&amp;auto=format&amp;fit=crop" alt="Fleet of delivery trucks parked and ready" loading="lazy">
+        <div class="about-card-text">
+          <p class="eyebrow">Coverage</p>
+          <h3 style="color:var(--white); margin-top:6px;">Lagos-based. Nationwide reach.</h3>
+          <p>Operating out of Jibowu, Lagos, with delivery routes covering Nigeria and cross-border service to Accra, Ghana.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -613,17 +669,7 @@ SEO Meta Tags
         <h2>Courier, logistics &amp; supply services</h2>
         <p>Every job is quoted based on route, size and urgency. Reach out on WhatsApp for a quick, accurate quote.</p>
       </div>
-      <svg viewBox="0 0 160 130" class="crates-icon" aria-hidden="true">
-        <rect x="14" y="60" width="46" height="46" rx="2" fill="none" stroke="var(--navy)" stroke-width="2.5"/>
-        <line x1="14" y1="83" x2="60" y2="83" stroke="var(--gold)" stroke-width="2.5"/>
-        <line x1="37" y1="60" x2="37" y2="106" stroke="var(--gold)" stroke-width="2.5"/>
-        <rect x="66" y="34" width="52" height="52" rx="2" fill="none" stroke="var(--navy)" stroke-width="2.5"/>
-        <line x1="66" y1="60" x2="118" y2="60" stroke="var(--gold)" stroke-width="2.5"/>
-        <line x1="92" y1="34" x2="92" y2="86" stroke="var(--gold)" stroke-width="2.5"/>
-        <rect x="8" y="110" width="128" height="8" rx="1.5" fill="none" stroke="var(--silver)" stroke-width="2"/>
-        <circle cx="22" cy="122" r="4" fill="none" stroke="var(--silver)" stroke-width="2"/>
-        <circle cx="122" cy="122" r="4" fill="none" stroke="var(--silver)" stroke-width="2"/>
-      </svg>
+      <img class="services-photo" src="https://images.unsplash.com/photo-1713859326033-f75e04439c3e?fm=jpg&amp;q=60&amp;w=700&amp;auto=format&amp;fit=crop" alt="Shipping containers ready for freight" loading="lazy">
     </div>
 
     <div class="service-list">
