@@ -898,8 +898,319 @@
             rgba(6,20,49,.97),
             rgba(10,32,80,.91)
         ),
-        url('https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?fm=jpg&q=60&w=1400&auto=format&fit=crop')
+        url('/images/PHOTO-2026-09-03-13-53-43.jpg')
         center/cover no-repeat;
+}
+
+/* =========================================================
+   VIDEO SHOWCASE & OPERATIONS GALLERY
+   ========================================================= */
+
+.novex-videos {
+    background: var(--novex-navy-deep);
+    color: var(--novex-white);
+}
+
+.novex-videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.novex-video-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--novex-radius);
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.novex-video-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--novex-gold);
+}
+
+.novex-video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.novex-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.novex-video-info {
+    padding: 18px 20px;
+}
+
+.novex-video-info h3 {
+    color: var(--novex-white);
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+}
+
+.novex-video-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.86rem;
+    margin: 0;
+}
+
+.novex-gallery {
+    background: var(--novex-off-white);
+}
+
+.novex-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 36px;
+}
+
+.novex-gallery-item {
+    position: relative;
+    border-radius: var(--novex-radius);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--novex-line);
+    background: var(--novex-white);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.novex-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.novex-gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+.novex-gallery-caption {
+    position: absolute;
+    bottom: 0;
+    inset-x: 0;
+    padding: 14px 16px;
+    background: linear-gradient(0deg, rgba(6,20,49,0.92) 0%, transparent 100%);
+    color: var(--novex-white);
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+/* =========================================================
+   COMPARE SECTION (SJ NOVEX VS TRADITIONAL CARGO)
+   ========================================================= */
+
+.novex-compare {
+    background: var(--novex-white);
+    border-top: 1px solid var(--novex-line);
+    border-bottom: 1px solid var(--novex-line);
+}
+
+.novex-compare-table {
+    width: 100%;
+    margin-top: 36px;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--novex-line);
+    border-radius: var(--novex-radius);
+    overflow: hidden;
+    background: var(--novex-white);
+}
+
+.novex-compare-table th,
+.novex-compare-table td {
+    padding: 18px 20px;
+    text-align: left;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--novex-line);
+}
+
+.novex-compare-table th {
+    background: var(--novex-navy-deep);
+    color: var(--novex-white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.novex-compare-table th.highlight {
+    color: var(--novex-gold-light);
+    background: var(--novex-navy);
+}
+
+.novex-compare-table tr:last-child td {
+    border-bottom: none;
+}
+
+.novex-compare-table td.brand-col {
+    background: rgba(232, 160, 32, 0.05);
+    font-weight: 600;
+    color: var(--novex-navy);
+}
+
+.novex-check-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #10B981;
+    font-weight: 600;
+}
+
+.novex-cross-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #EF4444;
+    font-weight: 500;
+}
+
+/* =========================================================
+   TESTIMONIALS SECTION
+   ========================================================= */
+
+.novex-testimonials {
+    background: var(--novex-navy-deep);
+    color: var(--novex-white);
+}
+
+.novex-testi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+    margin-top: 36px;
+}
+
+.novex-testi-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--novex-radius);
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.novex-testi-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--novex-gold);
+}
+
+.novex-testi-stars {
+    color: var(--novex-gold);
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.novex-testi-card p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.novex-testi-author {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 14px;
+}
+
+.novex-testi-author strong {
+    display: block;
+    color: var(--novex-white);
+    font-size: 0.92rem;
+}
+
+.novex-testi-author span {
+    color: var(--novex-gold-light);
+    font-size: 0.78rem;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* =========================================================
+   FAQ ACCORDION SECTION
+   ========================================================= */
+
+.novex-faq {
+    background: var(--novex-off-white);
+}
+
+.novex-faq-list {
+    max-width: 800px;
+    margin: 36px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.novex-faq-item {
+    background: var(--novex-white);
+    border: 1px solid var(--novex-line);
+    border-radius: var(--novex-radius);
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.novex-faq-item.active {
+    border-color: var(--novex-gold);
+    box-shadow: 0 4px 14px rgba(10,32,80,0.06);
+}
+
+.novex-faq-question {
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.02rem;
+    font-weight: 600;
+    color: var(--novex-navy);
+    user-select: none;
+}
+
+.novex-faq-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(232, 160, 32, 0.12);
+    color: var(--novex-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+
+.novex-faq-item.active .novex-faq-icon {
+    transform: rotate(45deg);
+    background: var(--novex-gold);
+    color: var(--novex-navy-deep);
+}
+
+.novex-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+    padding: 0 24px;
+    color: var(--novex-slate);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+.novex-faq-item.active .novex-faq-answer {
+    max-height: 500px;
+    padding: 0 24px 22px;
+    transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
 }
 
 .novex-coverage::before {
@@ -2452,8 +2763,8 @@ body {
 <section class="novex-fleet-banner">
 
     <img
-        src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?fm=jpg&q=60&w=1400&auto=format&fit=crop"
-        alt="Delivery truck on the highway"
+        src="/images/PHOTO-2026-09-03-13-53-42.jpg"
+        alt="SJ Novex Limited Courier & Logistics Fleet"
         loading="lazy"
     >
 
@@ -2474,6 +2785,154 @@ body {
             Built for businesses that cannot afford a missed delivery,
             and individuals who simply want it done right.
         </p>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     OPERATIONS IN ACTION (VIDEO SHOWCASE)
+========================================================= --}}
+
+<section class="novex-section novex-videos" id="videos">
+
+    <div class="novex-container">
+
+        <div class="novex-section-head">
+
+            <p class="novex-eyebrow" style="color:var(--novex-gold-light);">
+                Watch us in action
+            </p>
+
+            <h2 style="color:var(--novex-white);">
+                Real-time dispatch &amp; delivery operations
+            </h2>
+
+            <p style="color:rgba(255,255,255,0.72);">
+                Take a look inside our daily logistics workflow — from rapid motorcycle dispatching to interstate freight transport and doorstep delivery.
+            </p>
+
+        </div>
+
+        <div class="novex-videos-grid">
+
+            <div class="novex-video-card">
+                <div class="novex-video-wrapper">
+                    <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-39.jpg">
+                        <source src="/videos/VIDEO-2026-09-03-13-39-02.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <div class="novex-video-info">
+                    <h3>Express Dispatch Rider Pickup</h3>
+                    <p>Fast parcel collection by our dedicated riders across Lagos.</p>
+                </div>
+            </div>
+
+            <div class="novex-video-card">
+                <div class="novex-video-wrapper">
+                    <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-41.jpg">
+                        <source src="/videos/VIDEO-2026-09-03-13-41-10.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <div class="novex-video-info">
+                    <h3>Interstate &amp; Cargo Freight Transport</h3>
+                    <p>Safe loading and transit of commercial goods across states.</p>
+                </div>
+            </div>
+
+            <div class="novex-video-card">
+                <div class="novex-video-wrapper">
+                    <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-44.jpg">
+                        <source src="/videos/VIDEO-2026-09-03-13-43-18.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <div class="novex-video-info">
+                    <h3>Doorstep Delivery Confirmation</h3>
+                    <p>Verified handoffs directly to corporate and individual clients.</p>
+                </div>
+            </div>
+
+            <div class="novex-video-card">
+                <div class="novex-video-wrapper">
+                    <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-46.jpg">
+                        <source src="/videos/VIDEO-2026-09-03-13-45-07.mp4" type="video/mp4">
+                        Your browser does not support video playback.
+                    </video>
+                </div>
+                <div class="novex-video-info">
+                    <h3>Accra, Ghana Cross-Border Shipping</h3>
+                    <p>Secure international logistics for business packages and cargo.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     LIVE OPERATIONS GALLERY
+========================================================= --}}
+
+<section class="novex-section novex-gallery" id="gallery">
+
+    <div class="novex-container">
+
+        <div class="novex-section-head">
+
+            <p class="novex-eyebrow">
+                Gallery
+            </p>
+
+            <h2>
+                Our operations in photos
+            </h2>
+
+            <p>
+                Every package handled with care. Here is a glimpse of our riders, vehicles, and active deliveries on the move.
+            </p>
+
+        </div>
+
+        <div class="novex-gallery-grid">
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-09-03-13-53-39.jpg" alt="Dispatch Rider Ready" loading="lazy">
+                <div class="novex-gallery-caption">Lagos Express Courier Dispatch</div>
+            </div>
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-09-03-13-53-41.jpg" alt="Package Parcel Handling" loading="lazy">
+                <div class="novex-gallery-caption">Secure Parcel Sorting &amp; Packaging</div>
+            </div>
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-09-03-13-53-44.jpg" alt="Delivery Vehicle Fleet" loading="lazy">
+                <div class="novex-gallery-caption">Fleet Operations &amp; Maintenance</div>
+            </div>
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-09-03-13-53-46.jpg" alt="Nationwide Cargo Freight" loading="lazy">
+                <div class="novex-gallery-caption">Nationwide Cargo Route Transit</div>
+            </div>
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-09-03-13-53-47.jpg" alt="Doorstep Customer Delivery" loading="lazy">
+                <div class="novex-gallery-caption">Client Package Delivery Handoff</div>
+            </div>
+
+            <div class="novex-gallery-item">
+                <img src="/images/PHOTO-2026-06-30-22-43-57.jpg" alt="SJ Novex Corporate Logistics" loading="lazy">
+                <div class="novex-gallery-caption">SJ Novex Logistics Team</div>
+            </div>
+
+        </div>
 
     </div>
 
@@ -2606,8 +3065,8 @@ body {
             <div class="novex-about-card">
 
                 <img
-                    src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?fm=jpg&q=60&w=900&auto=format&fit=crop"
-                    alt="Fleet of delivery trucks parked and ready"
+                    src="/images/PHOTO-2026-09-03-13-53-45.jpg"
+                    alt="SJ Novex Limited Dispatch & Operations"
                     loading="lazy"
                 >
 
@@ -2670,8 +3129,8 @@ body {
 
             <img
                 class="novex-services-photo"
-                src="https://images.unsplash.com/photo-1713859326033-f75e04439c3e?fm=jpg&q=60&w=700&auto=format&fit=crop"
-                alt="Shipping containers ready for freight"
+                src="/images/PHOTO-2026-09-03-13-53-40.jpg"
+                alt="SJ Novex Package Freight & Logistics"
                 loading="lazy"
             >
 
@@ -2902,6 +3361,250 @@ body {
     </div>
 
 </section>
+
+
+{{-- =========================================================
+     COMPARE SECTION (SJ NOVEX VS TRADITIONAL CARGO)
+========================================================= --}}
+
+<section class="novex-section novex-compare" id="compare">
+
+    <div class="novex-container">
+
+        <div class="novex-section-head">
+
+            <p class="novex-eyebrow">
+                Why we are different
+            </p>
+
+            <h2>
+                SJ Novex vs. Traditional Motor-Park Cargo
+            </h2>
+
+            <p>
+                Say goodbye to chaotic transport terminals, long delays, and lost packages. Experience modern, professional logistics built around your convenience.
+            </p>
+
+        </div>
+
+        <div style="overflow-x: auto;">
+            <table class="novex-compare-table">
+                <thead>
+                    <tr>
+                        <th>Logistics Feature</th>
+                        <th class="highlight">SJ Novex Limited</th>
+                        <th>Traditional Cargo Terminals (Chisco, GUO, ABC)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Doorstep Pickup</strong></td>
+                        <td class="brand-col"><span class="novex-check-icon">✓ Included</span> (We pick up directly from your home/office)</td>
+                        <td><span class="novex-cross-icon">✗ None</span> (You must travel to crowded park terminals)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct Doorstep Delivery</strong></td>
+                        <td class="brand-col"><span class="novex-check-icon">✓ Included</span> (Delivered straight to recipient's hands)</td>
+                        <td><span class="novex-cross-icon">✗ None</span> (Recipient must travel to destination park to collect)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Real-Time Updates</strong></td>
+                        <td class="brand-col"><span class="novex-check-icon">✓ Direct WhatsApp</span> Updates at every stage</td>
+                        <td><span class="novex-cross-icon">✗ Limited</span> No tracking until package arrives at terminal</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Package Care &amp; Handling</strong></td>
+                        <td class="brand-col"><span class="novex-check-icon">✓ Dedicated Care</span> Handled individually with security</td>
+                        <td><span class="novex-cross-icon">✗ Mixed Freight</span> Stacked under heavy luggage &amp; passenger cargo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cross-Border to Ghana</strong></td>
+                        <td class="brand-col"><span class="novex-check-icon">✓ Full Service</span> Direct Lagos to Accra logistics</td>
+                        <td><span class="novex-cross-icon">✗ Complex</span> Requires multiple transfers &amp; extra agents</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     TESTIMONIALS
+========================================================= --}}
+
+<section class="novex-section novex-testimonials" id="testimonials">
+
+    <div class="novex-container">
+
+        <div class="novex-section-head">
+
+            <p class="novex-eyebrow" style="color:var(--novex-gold-light);">
+                Client Stories
+            </p>
+
+            <h2 style="color:var(--novex-white);">
+                Trusted by businesses &amp; individuals across Nigeria
+            </h2>
+
+            <p style="color:rgba(255,255,255,0.72);">
+                Here is what our clients say about our prompt delivery, careful handling, and dependable service.
+            </p>
+
+        </div>
+
+        <div class="novex-testi-grid">
+
+            <div class="novex-testi-card">
+                <div>
+                    <div class="novex-testi-stars">★★★★★</div>
+                    <p>"SJ Novex completely changed how I run my e-commerce business in Lagos. My customers get their packages same-day, and I never have to worry about missing items."</p>
+                </div>
+                <div class="novex-testi-author">
+                    <strong>Adekoya Babatunde</strong>
+                    <span>E-Commerce Fashion Brand Owner</span>
+                </div>
+            </div>
+
+            <div class="novex-testi-card">
+                <div>
+                    <div class="novex-testi-stars">★★★★★</div>
+                    <p>"We rely on SJ Novex for urgent corporate document runs and office merchandise supplies between Lagos and Abuja. Extremely professional and dependable."</p>
+                </div>
+                <div class="novex-testi-author">
+                    <strong>Grace Nwachukwu</strong>
+                    <span>Corporate Procurement Manager</span>
+                </div>
+            </div>
+
+            <div class="novex-testi-card">
+                <div>
+                    <div class="novex-testi-stars">★★★★★</div>
+                    <p>"Prompt delivery of ministry materials and event equipment across state lines. Their communication on WhatsApp is top-notch."</p>
+                </div>
+                <div class="novex-testi-author">
+                    <strong>Pastor Emmanuel Oke</strong>
+                    <span>Church Operations Director</span>
+                </div>
+            </div>
+
+            <div class="novex-testi-card">
+                <div>
+                    <div class="novex-testi-stars">★★★★★</div>
+                    <p>"Their cross-border courier service to Accra, Ghana is seamless. Smooth customs clearance and fast delivery. Best logistics team we've worked with."</p>
+                </div>
+                <div class="novex-testi-author">
+                    <strong>Alhaji Farouk Usman</strong>
+                    <span>General Merchandise Distributor</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{{-- =========================================================
+     FAQ ACCORDION
+========================================================= --}}
+
+<section class="novex-section novex-faq" id="faq">
+
+    <div class="novex-container">
+
+        <div class="novex-section-head" style="margin: 0 auto; text-align:center;">
+
+            <p class="novex-eyebrow">
+                Got Questions?
+            </p>
+
+            <h2>
+                Frequently Asked Questions
+            </h2>
+
+            <p style="margin: 10px auto 0;">
+                Everything you need to know about our courier pickup, interstate shipping, and cross-border delivery services.
+            </p>
+
+        </div>
+
+        <div class="novex-faq-list">
+
+            <div class="novex-faq-item active">
+                <div class="novex-faq-question">
+                    <span>How fast is courier pickup and delivery in Lagos?</span>
+                    <span class="novex-faq-icon">+</span>
+                </div>
+                <div class="novex-faq-answer">
+                    We arrange rapid doorstep pickup across Lagos (Mainland &amp; Island) once you confirm your details on WhatsApp. Depending on urgency, we offer same-day express rider delivery or scheduled next-day drop-offs.
+                </div>
+            </div>
+
+            <div class="novex-faq-item">
+                <div class="novex-faq-question">
+                    <span>How does nationwide interstate shipping work?</span>
+                    <span class="novex-faq-icon">+</span>
+                </div>
+                <div class="novex-faq-answer">
+                    We pick up your parcels or commercial goods from your location in Lagos and transport them securely to major cities across Nigeria. Your package is tracked throughout transit, and we confirm delivery once received.
+                </div>
+            </div>
+
+            <div class="novex-faq-item">
+                <div class="novex-faq-question">
+                    <span>What is the process for Accra, Ghana cross-border delivery?</span>
+                    <span class="novex-faq-icon">+</span>
+                </div>
+                <div class="novex-faq-answer">
+                    We provide direct cross-border courier and cargo services from Lagos to Accra, Ghana. We handle package preparation, documentation, and safe transport to ensure your items arrive intact and on schedule.
+                </div>
+            </div>
+
+            <div class="novex-faq-item">
+                <div class="novex-faq-question">
+                    <span>How do I get a price quote for my delivery?</span>
+                    <span class="novex-faq-icon">+</span>
+                </div>
+                <div class="novex-faq-answer">
+                    Because rates depend on distance, package dimensions, weight, and urgency, simply tap any "Chat on WhatsApp" button on our site. Our dispatch team will give you an instant, straightforward quote with no hidden add-ons.
+                </div>
+            </div>
+
+            <div class="novex-faq-item">
+                <div class="novex-faq-question">
+                    <span>Do you offer recurring courier contracts for businesses?</span>
+                    <span class="novex-faq-icon">+</span>
+                </div>
+                <div class="novex-faq-answer">
+                    Yes! We partner with SMEs, corporate organizations, e-commerce stores, churches, and institutions for scheduled daily, weekly, or monthly delivery runs with priority dispatch and dedicated billing accounts.
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.novex-faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.novex-faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});
+</script>
 
 
 {{-- =========================================================

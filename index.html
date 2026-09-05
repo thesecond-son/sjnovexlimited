@@ -364,9 +364,59 @@ SEO Meta Tags
   .coverage{
     background:
       linear-gradient(rgba(6,20,49,0.90), rgba(6,20,49,0.94)),
-      url('https://images.unsplash.com/photo-1700716465891-9e5e9f501d7d?fm=jpg&q=60&w=1400&auto=format&fit=crop') center/cover no-repeat;
+      url('/images/PHOTO-2026-09-03-13-53-43.jpg') center/cover no-repeat;
     color: var(--white);
   }
+
+  /* ---------- Video Showcase & Gallery ---------- */
+  .videos-section{ background: var(--navy-deep); color: var(--white); }
+  .videos-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 22px; margin-top: 30px; }
+  .video-card{ background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius); overflow: hidden; }
+  .video-card:hover{ border-color: var(--gold); }
+  .video-wrap{ position: relative; width: 100%; aspect-ratio: 16/9; background: #000; }
+  .video-wrap video{ width: 100%; height: 100%; object-fit: cover; }
+  .video-info{ padding: 18px; }
+  .video-info h3{ color: var(--white); font-size: 1rem; margin-bottom: 4px; }
+  .video-info p{ color: rgba(255,255,255,0.7); font-size: 0.84rem; }
+
+  .gallery-section{ background: var(--off-white); }
+  .gallery-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(250px,1fr)); gap: 18px; margin-top: 30px; }
+  .gallery-item{ position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; border: 1px solid var(--line); background: var(--white); }
+  .gallery-item img{ width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease; }
+  .gallery-item:hover img{ transform: scale(1.04); }
+  .gallery-caption{ position: absolute; bottom: 0; inset-x: 0; padding: 12px 14px; background: linear-gradient(0deg, rgba(6,20,49,0.92) 0%, transparent 100%); color: var(--white); font-size: 0.8rem; }
+
+  /* ---------- Compare ---------- */
+  .compare-section{ background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .compare-table{ width: 100%; margin-top: 30px; border-collapse: separate; border-spacing: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--white); }
+  .compare-table th, .compare-table td{ padding: 16px 18px; text-align: left; font-size: 0.88rem; border-bottom: 1px solid var(--line); }
+  .compare-table th{ background: var(--navy-deep); color: var(--white); font-family: 'Space Grotesk', sans-serif; font-size: 0.92rem; }
+  .compare-table th.highlight{ color: var(--gold-light); background: var(--navy); }
+  .compare-table td.brand-col{ background: rgba(232,160,32,0.05); font-weight: 600; color: var(--navy); }
+  .check-icon{ color: #10B981; font-weight: 600; }
+  .cross-icon{ color: #EF4444; font-weight: 500; }
+
+  /* ---------- Testimonials ---------- */
+  .testi-section{ background: var(--navy-deep); color: var(--white); }
+  .testi-grid{ display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 20px; margin-top: 30px; }
+  .testi-card{ background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 22px; display:flex; flex-direction:column; justify-content:space-between; }
+  .testi-card:hover{ border-color: var(--gold); }
+  .testi-stars{ color: var(--gold); font-size: 1rem; margin-bottom: 10px; }
+  .testi-card p{ color: rgba(255,255,255,0.85); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; font-style: italic; }
+  .testi-author{ border-top: 1px solid rgba(255,255,255,0.1); padding-top: 12px; }
+  .testi-author strong{ display:block; color: var(--white); font-size: 0.88rem; }
+  .testi-author span{ color: var(--gold-light); font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; }
+
+  /* ---------- FAQ Accordion ---------- */
+  .faq-section{ background: var(--off-white); }
+  .faq-list{ max-width: 800px; margin: 30px auto 0; display:flex; flex-direction:column; gap: 12px; }
+  .faq-item{ background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .faq-item.active{ border-color: var(--gold); box-shadow: 0 4px 14px rgba(10,32,80,0.06); }
+  .faq-question{ padding: 18px 20px; display:flex; align-items:center; justify-content:space-between; cursor:pointer; font-family:'Space Grotesk',sans-serif; font-weight:600; color:var(--navy); user-select:none; }
+  .faq-icon{ width:22px; height:22px; border-radius:50%; background:rgba(232,160,32,0.12); color:var(--gold); display:flex; align-items:center; justify-content:center; font-weight:700; transition:transform 0.25s; flex-shrink:0; }
+  .faq-item.active .faq-icon{ transform:rotate(45deg); background:var(--gold); color:var(--navy-deep); }
+  .faq-answer{ max-height:0; overflow:hidden; transition:max-height 0.3s cubic-bezier(0,1,0,1); padding:0 20px; color:var(--slate); font-size:0.9rem; line-height:1.6; }
+  .faq-item.active .faq-answer{ max-height:500px; padding:0 20px 20px; transition:max-height 0.3s cubic-bezier(1,0,1,0); }
   .coverage-grid{
     display:grid; gap: 20px; margin-top: 30px;
   }
@@ -628,10 +678,106 @@ SEO Meta Tags
 </section>
 
 <section class="fleet-banner">
-  <img src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?fm=jpg&amp;q=60&amp;w=1400&amp;auto=format&amp;fit=crop" alt="Delivery truck on the highway" loading="lazy">
+  <img src="/images/PHOTO-2026-09-03-13-53-42.jpg" alt="SJ Novex Limited Fleet" loading="lazy">
   <div class="fleet-banner-overlay">
     <p class="eyebrow" style="color:var(--gold-light);">On the road</p>
     <h2 style="color:var(--white);">A fleet built to keep Nigeria moving</h2>
+  </div>
+</section>
+
+<section class="videos-section" id="videos" style="padding: 72px 0;">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--gold-light);">Watch us in action</p>
+      <h2 style="color:var(--white);">Real-time dispatch &amp; delivery operations</h2>
+      <p style="color:rgba(255,255,255,0.72);">Take a look inside our daily logistics workflow — from rapid motorcycle dispatching to interstate freight transport and doorstep delivery.</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-39.jpg">
+            <source src="/videos/VIDEO-2026-09-03-13-39-02.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Express Dispatch Rider Pickup</h3>
+          <p>Fast parcel collection by our dedicated riders across Lagos.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-41.jpg">
+            <source src="/videos/VIDEO-2026-09-03-13-41-10.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Interstate &amp; Cargo Freight Transport</h3>
+          <p>Safe loading and transit of commercial goods across states.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-44.jpg">
+            <source src="/videos/VIDEO-2026-09-03-13-43-18.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Doorstep Delivery Confirmation</h3>
+          <p>Verified handoffs directly to corporate and individual clients.</p>
+        </div>
+      </div>
+      <div class="video-card">
+        <div class="video-wrap">
+          <video controls preload="metadata" poster="/images/PHOTO-2026-09-03-13-53-46.jpg">
+            <source src="/videos/VIDEO-2026-09-03-13-45-07.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </div>
+        <div class="video-info">
+          <h3>Accra, Ghana Cross-Border Shipping</h3>
+          <p>Secure international logistics for business packages and cargo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section" id="gallery" style="padding: 72px 0;">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Gallery</p>
+      <h2>Our operations in photos</h2>
+      <p>Every package handled with care. Here is a glimpse of our riders, vehicles, and active deliveries on the move.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-09-03-13-53-39.jpg" alt="Dispatch Rider Ready" loading="lazy">
+        <div class="gallery-caption">Lagos Express Courier Dispatch</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-09-03-13-53-41.jpg" alt="Package Parcel Handling" loading="lazy">
+        <div class="gallery-caption">Secure Parcel Sorting &amp; Packaging</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-09-03-13-53-44.jpg" alt="Delivery Vehicle Fleet" loading="lazy">
+        <div class="gallery-caption">Fleet Operations &amp; Maintenance</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-09-03-13-53-46.jpg" alt="Nationwide Cargo Freight" loading="lazy">
+        <div class="gallery-caption">Nationwide Cargo Route Transit</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-09-03-13-53-47.jpg" alt="Doorstep Customer Delivery" loading="lazy">
+        <div class="gallery-caption">Client Package Delivery Handoff</div>
+      </div>
+      <div class="gallery-item">
+        <img src="/images/PHOTO-2026-06-30-22-43-57.jpg" alt="SJ Novex Corporate Logistics" loading="lazy">
+        <div class="gallery-caption">SJ Novex Logistics Team</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -666,7 +812,7 @@ SEO Meta Tags
         <p>Our mission is simple: every package reaches its destination securely and on time, backed by excellent customer service. Your trust is our priority, and every delivery matters.</p>
       </div>
       <div class="about-card">
-        <img src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?fm=jpg&amp;q=60&amp;w=900&amp;auto=format&amp;fit=crop" alt="Fleet of delivery trucks parked and ready" loading="lazy">
+        <img src="/images/PHOTO-2026-09-03-13-53-45.jpg" alt="SJ Novex Limited Dispatch & Operations" loading="lazy">
         <div class="about-card-text">
           <p class="eyebrow">Coverage</p>
           <h3 style="color:var(--white); margin-top:6px;">Lagos-based. Nationwide reach.</h3>
@@ -685,7 +831,7 @@ SEO Meta Tags
         <h2>Courier, logistics &amp; supply services</h2>
         <p>Every job is quoted based on route, size and urgency. Reach out on WhatsApp for a quick, accurate quote.</p>
       </div>
-      <img class="services-photo" src="https://images.unsplash.com/photo-1713859326033-f75e04439c3e?fm=jpg&amp;q=60&amp;w=700&amp;auto=format&amp;fit=crop" alt="Shipping containers ready for freight" loading="lazy">
+      <img class="services-photo" src="/images/PHOTO-2026-09-03-13-53-40.jpg" alt="SJ Novex Package Freight & Logistics" loading="lazy">
     </div>
 
     <div class="service-list">
@@ -732,6 +878,179 @@ SEO Meta Tags
     </div>
   </div>
 </section>
+
+<section class="compare-section" id="compare" style="padding:72px 0;">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Why we are different</p>
+      <h2>SJ Novex vs. Traditional Motor-Park Cargo</h2>
+      <p>Say goodbye to chaotic transport terminals, long delays, and lost packages. Experience modern, professional logistics built around your convenience.</p>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Logistics Feature</th>
+            <th class="highlight">SJ Novex Limited</th>
+            <th>Traditional Cargo Terminals (Chisco, GUO, ABC)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Doorstep Pickup</strong></td>
+            <td class="brand-col"><span class="check-icon">✓ Included</span> (We pick up directly from your home/office)</td>
+            <td><span class="cross-icon">✗ None</span> (You must travel to crowded park terminals)</td>
+          </tr>
+          <tr>
+            <td><strong>Direct Doorstep Delivery</strong></td>
+            <td class="brand-col"><span class="check-icon">✓ Included</span> (Delivered straight to recipient's hands)</td>
+            <td><span class="cross-icon">✗ None</span> (Recipient must travel to destination park to collect)</td>
+          </tr>
+          <tr>
+            <td><strong>Real-Time Updates</strong></td>
+            <td class="brand-col"><span class="check-icon">✓ Direct WhatsApp</span> Updates at every stage</td>
+            <td><span class="cross-icon">✗ Limited</span> No tracking until package arrives at terminal</td>
+          </tr>
+          <tr>
+            <td><strong>Package Care &amp; Handling</strong></td>
+            <td class="brand-col"><span class="check-icon">✓ Dedicated Care</span> Handled individually with security</td>
+            <td><span class="cross-icon">✗ Mixed Freight</span> Stacked under heavy luggage &amp; passenger cargo</td>
+          </tr>
+          <tr>
+            <td><strong>Cross-Border to Ghana</strong></td>
+            <td class="brand-col"><span class="check-icon">✓ Full Service</span> Direct Lagos to Accra logistics</td>
+            <td><span class="cross-icon">✗ Complex</span> Requires multiple transfers &amp; extra agents</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="testi-section" id="testimonials" style="padding:72px 0;">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow" style="color:var(--gold-light);">Client Stories</p>
+      <h2 style="color:var(--white);">Trusted by businesses &amp; individuals across Nigeria</h2>
+      <p style="color:rgba(255,255,255,0.72);">Here is what our clients say about our prompt delivery, careful handling, and dependable service.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <p>"SJ Novex completely changed how I run my e-commerce business in Lagos. My customers get their packages same-day, and I never have to worry about missing items."</p>
+        </div>
+        <div class="testi-author">
+          <strong>Adekoya Babatunde</strong>
+          <span>E-Commerce Fashion Brand Owner</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <p>"We rely on SJ Novex for urgent corporate document runs and office merchandise supplies between Lagos and Abuja. Extremely professional and dependable."</p>
+        </div>
+        <div class="testi-author">
+          <strong>Grace Nwachukwu</strong>
+          <span>Corporate Procurement Manager</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <p>"Prompt delivery of ministry materials and event equipment across state lines. Their communication on WhatsApp is top-notch."</p>
+        </div>
+        <div class="testi-author">
+          <strong>Pastor Emmanuel Oke</strong>
+          <span>Church Operations Director</span>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div>
+          <div class="testi-stars">★★★★★</div>
+          <p>"Their cross-border courier service to Accra, Ghana is seamless. Smooth customs clearance and fast delivery. Best logistics team we've worked with."</p>
+        </div>
+        <div class="testi-author">
+          <strong>Alhaji Farouk Usman</strong>
+          <span>General Merchandise Distributor</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq" style="padding:72px 0;">
+  <div class="container">
+    <div class="section-head" style="margin: 0 auto; text-align:center;">
+      <p class="eyebrow">Got Questions?</p>
+      <h2>Frequently Asked Questions</h2>
+      <p style="margin: 10px auto 0;">Everything you need to know about our courier pickup, interstate shipping, and cross-border delivery services.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item active">
+        <div class="faq-question">
+          <span>How fast is courier pickup and delivery in Lagos?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We arrange rapid doorstep pickup across Lagos (Mainland &amp; Island) once you confirm your details on WhatsApp. Depending on urgency, we offer same-day express rider delivery or scheduled next-day drop-offs.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How does nationwide interstate shipping work?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We pick up your parcels or commercial goods from your location in Lagos and transport them securely to major cities across Nigeria. Your package is tracked throughout transit, and we confirm delivery once received.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is the process for Accra, Ghana cross-border delivery?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          We provide direct cross-border courier and cargo services from Lagos to Accra, Ghana. We handle package preparation, documentation, and safe transport to ensure your items arrive intact and on schedule.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I get a price quote for my delivery?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Because rates depend on distance, package dimensions, weight, and urgency, simply tap any "Chat on WhatsApp" button on our site. Our dispatch team will give you an instant, straightforward quote with no hidden add-ons.
+        </div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you offer recurring courier contracts for businesses?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          Yes! We partner with SMEs, corporate organizations, e-commerce stores, churches, and institutions for scheduled daily, weekly, or monthly delivery runs with priority dispatch and dedicated billing accounts.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+});
+</script>
 
 <section class="coverage">
   <div class="container">

@@ -12,18 +12,19 @@ class SiteContentSeeder extends Seeder
     {
         Page::updateOrCreate(['slug' => 'home'], [
             'title'    => 'Home',
-            'eyebrow'  => 'The courier problem, solved',
-            'headline' => 'Late deliveries. Damaged goods. Couriers who go quiet. Not with us.',
-            'intro'    => "If a courier has ever cost you a customer, a deadline or your peace of mind, you already know the risk. SJ Novex Limited picks up, moves and delivers your parcels, documents and business goods across Nigeria and to Accra, Ghana — with clear timelines, careful handling and a real person to talk to until it lands.",
+            'eyebrow'  => 'Courier · Logistics · Supply — Nationwide',
+            'headline' => 'Your goods, handled with care and delivered on time, every time.',
+            'intro'    => 'SJ Novex Limited moves parcels, documents and business goods across Nigeria - fast, safe and dependable, from first pickup to final delivery.',
             'meta_title' => 'SJ Novex Limited | Logistics, Courier & Supply Services Nigeria',
-            'meta_description' => 'Late deliveries, damaged goods, couriers who go silent — SJ Novex Limited fixes that. Reliable logistics, courier and supply services across Nigeria and Accra, Ghana, with real accountability from pickup to doorstep.',
+            'meta_description' => 'SJ Novex Limited provides logistics, courier, procurement and supply services across Nigeria and Ghana.',
         ]);
 
         Page::updateOrCreate(['slug' => 'about'], [
             'title'    => 'About',
             'eyebrow'  => 'About us',
             'headline' => 'Reliable delivery, from pickup to doorstep',
-            'body'     => "SJ Novex Limited is a reliable courier and logistics company committed to providing fast, safe and dependable delivery services across Nigeria and to Accra, Ghana. We specialise in the pickup, transportation and delivery of parcels, documents and business goods, handled with professionalism and care from start to finish.\n\nBeyond courier work, we support businesses and organisations with transportation, general merchandise supply, contracting, and buying-and-selling services — giving clients a single, dependable partner for logistics and supply needs.\n\nOur mission is simple: every package reaches its destination securely and on time, backed by excellent customer service.",
+            'intro'    => 'SJ Novex Limited is a reliable courier and logistics company committed to providing fast, safe and dependable delivery services across Nigeria and to Accra, Ghana.',
+            'body'     => "SJ Novex Limited is a reliable courier and logistics company committed to providing fast, safe and dependable delivery services across Nigeria and to Accra, Ghana. We specialise in the pickup, transportation and delivery of parcels, documents and business goods, handled with professionalism and care from start to finish.\n\nBeyond courier work, we support businesses and organisations with transportation, general merchandise supply, contracting, and buying-and-selling services; giving clients a single, dependable partner for logistics and supply needs.\n\nOur mission is simple: every package reaches its destination securely and on time, backed by excellent customer service. Your trust is our priority, and every delivery matters.",
             'meta_title' => 'About SJ Novex Limited | Logistics Company in Lagos',
             'meta_description' => 'Learn about SJ Novex Limited, a Lagos-based courier and logistics company serving businesses and individuals across Nigeria and Accra, Ghana.',
         ]);
@@ -109,6 +110,7 @@ class SiteContentSeeder extends Seeder
 
         SiteSetting::updateOrCreate(['id' => 1], [
             'business_name' => 'SJ Novex Limited',
+            'logo_path' => 'images/logo.png',
             'phone' => '+234 803 135 1449',
             'whatsapp_number' => '2348031351449',
             'whatsapp_default_message' => "Hi, I found your website and I'd like to enquire about your services.",

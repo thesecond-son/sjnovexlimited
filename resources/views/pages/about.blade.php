@@ -58,7 +58,7 @@
             <div class="sj-about-hero__visual-image">
 
                 <img
-                    src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+                    src="/images/PHOTO-2026-09-03-13-53-45.jpg"
                     alt="SJ Novex logistics and transportation operations"
                 >
 
@@ -236,8 +236,7 @@
                 </p>
 
                 <h2>
-                    Built around reliability,
-                    responsiveness and practical solutions.
+                    {{ $page->headline }}
                 </h2>
 
                 <div class="sj-about-story__body">
